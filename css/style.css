@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    margin:0;
+    /* overflow: hidden; */
+    
+}
+
+
+.proof{
+    width: 400px;
+    padding: 40px 20px;
+    
+}
+
+
+.proof-continer i{
+    color: red;
+}
+
+
+
+.proof-continer{
+   
+    background-color: #fff;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+    text-align: center;
+    margin: auto;
+    padding: 50px 40px;
+    border: 1px solid #bbb;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+
+    position: relative;
+   
+}
+
+
+.proof-continer h3,.proof-continer p{
+    margin:5px;
+    padding: 5px 0;
+}
+
+
+.proof-continer::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: transparent;
+
+    position: absolute;
+    bottom:0;
+    left:0;
+
+
+}
+
+
+.proof-continer.show::after{
+
+    background-color: red;
+    animation: showbar 1s linear;
+}
+
+@keyframes showbar{
+    0%{
+        width:0%;
+    }
+
+    100%{
+        width: 100%;
+    }
+}
+
+
+.btn{
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding:10px 20px;
+    margin: 10px 0;
+
+    cursor: pointer;
+}
+
+
+.btn i{
+    width:20px;
+    height: 20px;
+    color: #444;
+    border-radius: 50%;
+    border: 1px solid #444;
+    margin-right: 10px;
+
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+
+.photoone{
+    background-color: #fff;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 1s;
+
+}
+
+
+.photoone .fa-file-pdf{
+    color: red;
+    margin-right: 20px;
+}
+
+
+.photoone .imagetexts{
+    font-weight: bold;
+    
+}
+
+
+
+
+
+.photoone .times{
+    margin: 0 20px;
+}
+
+
+
+.fa-check-circle{
+    display: none;
+}
+
+.fa-check-circle.active{
+    color: green;
+    display: block;
+}
+
+
+
+
+.two{
+    width: 100px;
+    height: 100px;
+    border-left: 5px solid red;
+    border-radius: 50%;
+    margin: auto;
+
+
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+
+    
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+
+
+    100%{
+        transform: rotate(1turn);
+    }
+}
+
+
+
+.fillfile{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+    border-radius: 10px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.fill{
+    color:red;
+}
+
+
+.hold{
+    border: 3px solid red;
+}
+
+
+
+.proof-continer.hovered .one{
+    opacity: 0.4;
+
+    transform: all 0.4s;
+}
+
+.hovered{
+    border: 3px dashed green;
+
+}
